@@ -1,4 +1,5 @@
-import './App.css'
+import './assets/images/css/VGstyles.css'
+import './assets/images/css/contact.css'
 
 function App() {
   
