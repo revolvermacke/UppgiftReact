@@ -1195,6 +1195,12 @@ body.dark-mode {
     background-color: var(--color-white-midopacity);
    }
 
+   #subscribe {
+    .container, .form-input {
+        background-color: var(--color-white-lowopacity);
+    }
+   }
+
 
 
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import LogoType from '../assets/images/silicon-logo.svg'
 import LogoTypeDark from '../assets/images/siliconlogodark.svg'
 
-const Header = () => {
+const Header = ({ darkMode, toggleDarkMode }) => {
   return (
     <header>
         <div className="container">
@@ -17,7 +17,7 @@ const Header = () => {
             <div id="darkmode-toggle-switch" className="btn-toggle-switch">
                 <span className="label dark-span">Dark mode</span>
                 <label for="darkmode-switch" className="toggle-switch">
-                    <input id="darkmode-switch" type="checkbox" />
+                    <input id="darkmode-switch" type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
                     <span className="slider round"></span>
                 </label>
             </div>
