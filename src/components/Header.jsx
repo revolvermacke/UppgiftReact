@@ -1,17 +1,19 @@
 import React from 'react'
 import LogoType from '../assets/images/silicon-logo.svg'
 import LogoTypeDark from '../assets/images/siliconlogodark.svg'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   return (
     <header>
         <div className="container">
 
-            <a id="logo" className="darkhide-imgs" href="VGindex.html"><img src={LogoType} /></a>
-            <a id="logo" className="dark-display" href="VGindex.html"><img src={LogoTypeDark} /></a>
+            <Link id="logo" className="darkhide-imgs" to="/"><img src={LogoType} /></Link>
+            <Link id="logo" className="dark-display" to="/"><img src={LogoTypeDark} /></Link>
 
             <nav id="main-menu" className="navbar">
-                <a className="nav-link" href="#">Features</a>
+                <NavLink className="nav-link" to="/Features">Features</NavLink>
+                <NavLink className="nav-link" to="/Contact">Contact</NavLink>
             </nav>
 
             <div id="darkmode-toggle-switch" className="btn-toggle-switch">

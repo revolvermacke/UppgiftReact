@@ -6,10 +6,12 @@ import MoneyTransfer from './MoneyTransfer'
 import Clients from './Clients'
 import FaqPage from './FaqPage'
 import SubscribePage from './SubscribePage'
+import Hero from './Hero'
 
 const Main = () => {
   return (
     <main>
+        <Hero />
         <BrandSection />
         <AppFeatures />
         <Work />

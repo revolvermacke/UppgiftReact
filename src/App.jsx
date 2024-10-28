@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react'
 import './assets/images/css/VGstyles.css'
-// import './assets/images/css/contact.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './views/Home';
+import Contact from './views/Contact';
+
 import Footer from './components/Footer'
 import LinearGradient from './components/LinearGradient'
-import Main from './components/Main'
+import Header from './components/Header';
+import Main from './components/Main';
+
+
 
 function App() {
   
@@ -27,11 +33,12 @@ function App() {
   }
 
   return (
-    <div className='wrapper'>
-      <LinearGradient darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Main />
-      <Footer />
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/Contact' element={<Contact />} />
+        </Routes>
+    </BrowserRouter>
   )
 }
 
