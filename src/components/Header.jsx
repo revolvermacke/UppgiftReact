@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import LogoType from '../assets/images/silicon-logo.svg'
 import LogoTypeDark from '../assets/images/siliconlogodark.svg'
 import { Link, NavLink } from 'react-router-dom'
+import { ThemeContext } from '../ThemeContext'
 
-const Header = ({ darkMode, toggleDarkMode }) => {
+const Header = () => {
+    const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+
   return (
     <header>
         <div className="container">
