@@ -4,6 +4,7 @@
   --clr-white-opacity: rgba(255, 255, 255, 0.08);
   --color-dark: #0b0f19;
   --color-primary: #6366f1;
+  --color-low-opacity-primary: #6365f18c;
   --color-gray: #9397ad;
   --color-lightgray: #e2e5f1;
   --color-white: #ffffff;
@@ -972,6 +973,20 @@ footer {
   background-repeat: no-repeat;
   background-position: 10px 50%;
   width: 200px;
+}
+
+.message {
+  font-size: 1rem;
+  position: absolute;
+  margin-bottom: 8rem;
+  width: 20%;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  text-align: center;
+  background-color: var(--color-low-opacity-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
