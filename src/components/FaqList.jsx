@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const FaqList = () => {
   const [faqs, setFaqs] = useState([]);
@@ -7,14 +7,16 @@ const FaqList = () => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const response = await fetch('https://win24-assignment.azurewebsites.net/api/faq');
+        const response = await fetch(
+          "https://win24-assignment.azurewebsites.net/api/faq"
+        );
         const data = await response.json();
         setFaqs(data);
       } catch (error) {
-        console.error('Error fetching FAQs:', error);
+        console.error("Error fetching FAQs:", error);
       }
     };
-    
+
     fetchFaqs();
   }, []);
 
@@ -29,7 +31,12 @@ const FaqList = () => {
   return (
     <div className="faq-boxes">
       {faqs.map((faq) => (
-        <div className={`FAQ-item ${expandedIds.includes(faq.id) ? 'expanded' : ''}`} key={faq.id}>
+        <div
+          className={`FAQ-item ${
+            expandedIds.includes(faq.id) ? "expanded" : ""
+          }`}
+          key={faq.id}
+        >
           <div className="dropdown-btn-container">
             <button
               className="dropdown-btn"
@@ -37,14 +44,14 @@ const FaqList = () => {
               aria-controls={`answer-${faq.id}`}
               onClick={() => toggleExpand(faq.id)}
             >
-              <span className='faqQuestion'>{faq.title}</span>
+              <span className="faqQuestion">{faq.title}</span>
               <i className="fa-solid fa-chevron-down btn-circle2 btn-darkmode"></i>
             </button>
           </div>
           <div
             className="FAQ-answer"
             id={`answer-${faq.id}`}
-            style={{ display: expandedIds.includes(faq.id) ? 'block' : 'none' }}
+            style={{ display: expandedIds.includes(faq.id) ? "block" : "none" }}
           >
             <p>{faq.content}</p>
           </div>
