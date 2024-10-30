@@ -84,33 +84,35 @@ a:hover {
   cursor: pointer;
 }
 
-.navbar {
-  position: absolute;
-  top: 4rem;
-  right: 0;
-  max-width: 400px;
-  width: 100%;
-  height: 400px;
-  background-color: var(--color-p-card-gray);
-  border-radius: 0.5rem;
-  font-size: 2rem;
-  padding: 1rem 0;
-  z-index: 10;
-  transform: translateX(100%); /* Start utanför skärmen */
-  opacity: 0; /* Osynlig */
-  visibility: hidden; /* Ej synlig */
-  transition: transform 0.4s ease, opacity 0.4s ease; /* Glid- och fade-effekt */
-}
-
-.navbar.showMenu {
-  transform: translateX(0); /* Flyttar in menyn */
-  opacity: 1; /* Synlig */
-  visibility: visible; /* Gör den synlig för skärmen */
-  display: flex; /* Flexlayout för innehållet */
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 5rem;
+@media (max-width:1399px) {
+  .navbar {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    background-color: var(--color-p-card-gray);
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    padding: 1rem 0;
+    z-index: 10;
+    transform: translateX(100%); /* Start utanför skärmen */
+    opacity: 0; /* Osynlig */
+    visibility: hidden; /* Ej synlig */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Glid- och fade-effekt */
+  }
+  
+  .navbar.showMenu {
+    transform: translateX(0); /* Flyttar in menyn */
+    opacity: 1; /* Synlig */
+    visibility: visible; /* Gör den synlig för skärmen */
+    display: flex; /* Flexlayout för innehållet */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+  }
 }
 
 .btn-getapp {
