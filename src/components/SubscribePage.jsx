@@ -6,8 +6,19 @@ const SubscribePage = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setMessage("Vänligen ange en giltlig e-postadress.");
+      setTimeout(() => setMessage(''), 2000);
+      return;
+    }
 
     const res = await fetch(
       "https://win24-assignment.azurewebsites.net/api/forms/subscribe",
