@@ -16,7 +16,7 @@ const SubscribePage = () => {
 
     if (!validateEmail(email)) {
       setMessage("Vänligen ange en giltlig e-postadress.");
-      setTimeout(() => setMessage(''), 2000);
+      setTimeout(() => setMessage(""), 2000);
       return;
     }
 
@@ -38,14 +38,14 @@ const SubscribePage = () => {
       console.log(data);
       setMessage(data.message || "Misslyckades med att prenumerera.");
 
-      setTimeout(() => setMessage(''), 2000);
+      setTimeout(() => setMessage(""), 2000);
       return;
     }
 
     setMessage("Tack för din prenumeration!");
     setEmail("");
 
-    setTimeout(() => setMessage(''), 2000);
+    setTimeout(() => setMessage(""), 2000);
   };
 
   return (

@@ -13,6 +13,7 @@
   --color-bg-cards: #f3f6ff;
   --color-success: #22c55e;
   --color-white-opacity: #ffffff9d;
+  --color-error: #ef4444;
   --color-white-lowopacity: hsla(0, 0%, 100%, 0.05);
   --color-white-midopacity: hsla(0, 0%, 100%, 0.15);
 
@@ -85,7 +86,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media (max-width:1399px) {
+@media (max-width: 1399px) {
   .navbar {
     position: absolute;
     top: 4rem;
@@ -103,7 +104,7 @@ a:hover {
     visibility: hidden; /* Ej synlig */
     transition: transform 0.4s ease, opacity 0.4s ease; /* Glid- och fade-effekt */
   }
-  
+
   .navbar.showMenu {
     transform: translateX(0); /* Flyttar in menyn */
     opacity: 1; /* Synlig */
@@ -981,7 +982,7 @@ footer {
   margin-bottom: 8rem;
   width: 20%;
   padding: 1rem 2rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-align: center;
   background-color: var(--color-low-opacity-primary);
   border: 1px solid var(--color-primary);
@@ -1317,6 +1318,15 @@ body.dark-mode {
       }
     }
   }
+  .informationsBox {
+    background-color: var(--color-dark);
+    h1 {
+      color: var(--color-white);
+    }
+    p {
+      color: var(--color-lightgray);
+    }
+  }
 }
 
 /* --ContactPage-- */
@@ -1608,4 +1618,48 @@ body.dark-mode {
   #smallCard1 {
     margin-bottom: 1rem;
   }
+}
+
+/* ---Handle form-btn--- */
+
+.informationsBox {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  width: 500px;
+  height: 600px;
+  border: 1px solid var(--color-contentgray);
+  border-radius: 0.5rem;
+  background-color: var(--color-gray);
+
+  h1 {
+    color: var(--color-dark);
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 2rem;
+    color: var(--color-dark);
+  }
+}
+
+.btn-close {
+  width: 80%;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-success);
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #389158;
+  }
+}
+
+/* ---Error message--- */
+.errorMessage {
+  color: var(--color-error);
 }

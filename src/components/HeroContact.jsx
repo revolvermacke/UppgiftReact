@@ -1,4 +1,5 @@
 import Breadcrumb from "./Breadcrumb";
+import ConsultationForm from "./ConsultationForm";
 
 const HeroContact = () => {
   return (
@@ -49,39 +50,7 @@ const HeroContact = () => {
               </div>
             </div>
           </div>
-
-          <form id="consultationForm" className="consultationForm">
-            <h2>Get Online Consultation</h2>
-            <div className="inputGroup">
-              <label htmlFor="fullName" className="formLabel">
-                Full name
-              </label>
-              <input type="text" id="fullName" className="formInput" />
-            </div>
-
-            <div className="inputGroup">
-              <label htmlFor="email" className="formLabel">
-                Email address
-              </label>
-              <input type="email" id="email" className="formInput" />
-            </div>
-
-            <div className="inputGroup">
-              <label htmlFor="select" className="formLabel">
-                Specialist
-              </label>
-              <select name="" id="select" className="formInput">
-                <option value=""></option>
-                <option value="">Lorem.</option>
-                <option value="">Lorem, ipsum.</option>
-                <option value="">Lorem, ipsum dolor.</option>
-              </select>
-            </div>
-
-            <button id="submit-btn" type="submit" className="btn-primary">
-              Make an appointment
-            </button>
-          </form>
+          <ConsultationForm />
         </div>
       </div>
     </section>
