@@ -23,12 +23,35 @@ const ConsultationForm = () => {
     }
   };
 
+  const validateForm = () => {
+    const findError = {};
+
+    if (!/^[A-Öa-ö\s\-]{2,}$/.test(formData.fullName)) {
+      findError.fullName = "Must be at least 2 characters long, no numbers.";
+    }
+
+    if (
+      !/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email)
+    ) {
+      findError.email = "Please enter a valid email address.";
+    }
+
+    if (formData.Specialist.trim() === "") {
+      findError.Specialist = "Please select a specialist.";
+    }
+
+    setErrors(findError);
+    return Object.keys(findError).length === 0;
+  };
+
   const handleOk = () => {
     setSubmitted(false);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
 
     const newErrors = {};
     Object.keys(formData).forEach((field) => {

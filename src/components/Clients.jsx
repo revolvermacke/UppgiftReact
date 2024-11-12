@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Quotes from "../assets/images/quotes.svg";
 import Rating4 from "../assets/images/rating1.svg";
 import Rating5 from "../assets/images/rating2.svg";
-import Fannie from "../assets/images/fannie.svg";
-import Abbe from "../assets/images/abbe.svg";
 
 const Clients = () => {
   const [testimonials, setTestimonials] = useState([]);
