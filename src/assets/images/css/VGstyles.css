@@ -1655,7 +1655,7 @@ body.dark-mode {
   font-size: 1rem;
 
   &:hover {
-    background-color: #389158;
+    background-color: var(--color-primary);
   }
 }
 
